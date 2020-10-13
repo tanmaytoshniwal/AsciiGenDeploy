@@ -40,9 +40,10 @@ def convert(im):
             d.text((j*oneCharWidth,i*oneCharHeight),getChar(h),fill=(r,g,b))
         converted_file.write('\n')
 
-    OutputImage.save('output.png')
+    #OutputImage.save('output.png')
     st.image("output.png", use_column_width=True)
-    return 'output.png'
+    return OutputImage
+    #return 'output.png'
     #return st.image("output.png", output_format="PNG")
 
 import os
