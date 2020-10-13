@@ -41,7 +41,8 @@ def convert(im):
         converted_file.write('\n')
 
     #OutputImage.save('output.png')
-    st.image("output.png", use_column_width=True)
+    #st.image("output.png", use_column_width=True)
+    st.image(OutputImage, use_column_width=True)
     return OutputImage
     #return 'output.png'
     #return st.image("output.png", output_format="PNG")
