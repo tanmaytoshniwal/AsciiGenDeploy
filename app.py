@@ -41,6 +41,7 @@ def convert(im):
         converted_file.write('\n')
 
     OutputImage.save('output.png')
+    st.image("output.png", use_column_width=True)
     return 'output.png'
     #return st.image("output.png", output_format="PNG")
 
@@ -59,6 +60,6 @@ if im is None:
     st.text("Please upload an image file")
 else:
     image = Image.open(im)
-    #st.image(image, use_column_width=True)
+    st.image(image, use_column_width=True)
     result=convert(image)
     st.markdown(get_binary_file_downloader_html(result, 'Picture'), unsafe_allow_html=True)
