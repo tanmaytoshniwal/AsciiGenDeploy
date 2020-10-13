@@ -10,7 +10,7 @@ charArr=list(chars)
 charLength=len(charArr)
 interval=charLength/256
 
-scalefactor=0.4
+scalefactor=0.8
 
 oneCharWidth=8
 oneCharHeight=18
