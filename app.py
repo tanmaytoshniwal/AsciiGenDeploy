@@ -2,6 +2,8 @@ import streamlit as st
 from PIL import Image, ImageDraw
 import math
 
+st.set_option('server.enableXsrfProtection', False)
+
 st.title("ASCII GENERATOR")
 
 chars="`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
