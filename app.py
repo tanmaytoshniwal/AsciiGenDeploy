@@ -10,7 +10,7 @@ charArr=list(chars)
 charLength=len(charArr)
 interval=charLength/256
 
-scalefactor=0.8
+scalefactor=0.6
 
 oneCharWidth=8
 oneCharHeight=18
@@ -40,11 +40,9 @@ def convert(im):
             d.text((j*oneCharWidth,i*oneCharHeight),getChar(h),fill=(r,g,b))
         converted_file.write('\n')
 
-    #OutputImage.save('output.png')
-    #st.image("output.png", use_column_width=True)
+    OutputImage.save('output.png')
     st.image(OutputImage, use_column_width=True)
-    return OutputImage
-    #return 'output.png'
+    return 'output.png'
     #return st.image("output.png", output_format="PNG")
 
 import os
