@@ -19,7 +19,7 @@ def getChar(intInput):
     return charArr[math.floor(intInput*interval)]
 
 converted_file=open('Output.txt','w')
-im = st.file_uploader("Upload Image", type=["jpg", "png"])
+im = st.file_uploader("Upload Image", type=["jpg", "png", "jpeg"])
 
 def convert(im):
     width, height=im.size
