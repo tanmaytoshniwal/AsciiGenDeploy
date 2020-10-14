@@ -10,7 +10,7 @@ charArr=list(chars)
 charLength=len(charArr)
 interval=charLength/256
 
-scalefactor=0.6
+scalefactor=0.2
 
 oneCharWidth=8
 oneCharHeight=18
@@ -41,9 +41,8 @@ def convert(im):
         converted_file.write('\n')
 
     OutputImage.save('output.png')
-    st.image(OutputImage, use_column_width=True)
+    st.image(OutputImage, output_format="PNG", use_column_width=True)
     return 'output.png'
-    #return st.image("output.png", output_format="PNG")
 
 import os
 import base64
@@ -52,6 +51,8 @@ def get_binary_file_downloader_html(bin_file, file_label='File'):
         data = f.read()
     bin_str = base64.b64encode(data).decode()
     href = f'<a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}">Download {file_label}</a>'
+    os.remove('output.png')
+    #os.remove('Output.txt')
     return href
 
 
@@ -63,3 +64,5 @@ else:
     st.image(image, use_column_width=True)
     result=convert(image)
     st.markdown(get_binary_file_downloader_html(result, 'Picture'), unsafe_allow_html=True)
+
+
